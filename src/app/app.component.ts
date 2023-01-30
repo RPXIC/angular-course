@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from './models/product.model';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,10 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   widthImg = 10;
+  showImg = true;
   name = 'rpxic';
   age = 34;
+  imgParent = '';
   img =
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1920px-Angular_full_color_logo.svg.png';
   btnDisabled = true;
@@ -33,32 +35,38 @@ export class AppComponent {
   };
   products: Product[] = [
     {
+      id: '1',
       name: 'EL mejor juguete',
       price: 565,
       image: './assets/images/toy.jpeg',
-      category: 'all',
+      // category: 'all',
     },
     {
+      id: '2',
       name: 'Bicicleta casi nueva',
       price: 356,
       image: '../assets/images/bike.jpeg',
     },
     {
+      id: '3',
       name: 'Colleción de albumnes',
       price: 34,
       image: './assets/images/album.jpeg',
     },
     {
+      id: '4',
       name: 'Mis libros',
       price: 23,
       image: './assets/images/books.jpeg',
     },
     {
+      id: '5',
       name: 'Casa para perro',
       price: 34,
       image: './assets/images/house.jpeg',
     },
     {
+      id: '6',
       name: 'Gafas',
       price: 3434,
       image: './assets/images/glasses.jpeg',
@@ -94,5 +102,13 @@ export class AppComponent {
 
   onRegister() {
     console.log(this.register);
+  }
+
+  onLoaded(img: string) {
+    console.log('log father', img);
+  }
+
+  toggleImg() {
+    this.showImg = !this.showImg;
   }
 }

@@ -1,3 +1,17 @@
+<p>https://www.w3schools.com/howto/img_avatar.png</p>
+<p><input type="text" [(ngModel)]="imgParent" /></p>
+<button (click)="toggleImg()">Toggle Image</button>
+<p>{{ showImg }}</p>
+<app-img
+  *ngIf="showImg"
+  (loaded)="onLoaded($event)"
+  [img]="imgParent"
+></app-img>
+<hr />
+
+<app-product [product]="product" *ngFor="let product of products">
+</app-product>
+
 <h1>Form</h1>
 <form (ngSubmit)="onRegister()" #myForm="ngForm">
   <div class="input-group">
