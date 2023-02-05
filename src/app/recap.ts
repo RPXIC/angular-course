@@ -1,4 +1,4 @@
-const username: string = 'rpxic';
+// const username: string = 'rpxic';
 
 const sum = (a: number, b: number) => {
   return a + b;
