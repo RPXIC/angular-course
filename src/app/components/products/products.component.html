@@ -4,6 +4,9 @@
 <p>Time ago: {{ today | timeAgo }}</p>
 <p>Other date: {{ date | date : "dd.MM.yyyy" }}</p>
 <p>{{ "heLlO wORld" | uppercase }}</p>
+<span>Encoded input: </span>
+<input type="text" [(ngModel)]="stringToEncode" />
+<span>{{ stringToEncode | stringEncode }}</span>
 
 <div class="products--grid">
   <app-product

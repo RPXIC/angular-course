@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [];
   today = new Date();
   date = new Date(2021, 1, 21);
+  stringToEncode = '';
 
   constructor(
     private storeService: StoreService,
